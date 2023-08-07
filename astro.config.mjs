@@ -11,5 +11,5 @@ export default defineConfig({
   image: {
     service: sharpImageService(),
   },
-  base: '/luna_landing',
+  base: '/',
 });
