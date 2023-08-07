@@ -1,0 +1,117 @@
+---
+import { Image } from "astro:assets";
+import Card1 from "../assets/images/cards/card1.png";
+import Card2 from "../assets/images/cards/card2.png";
+import Card3 from "../assets/images/cards/card3.png";
+import Card4 from "../assets/images/cards/card4.png";
+import Card5 from "../assets/images/cards/card5.png";
+---
+
+<ul class="grid grid-cols-3 gap-5 max-w-1200 m-auto">
+  <li
+    class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl"
+  >
+    <div class="absolute bottom-9 text-center z-40">
+      <h3 class="text-white font-semibold text-xl mb-3">Powerful analytics</h3>
+      <p class="text-white/70 max-w-[280px]">
+        Better understand your customers with AI-powered analysis of support
+        conversations
+      </p>
+    </div>
+    <div class="noise rounded-xl"></div>
+    <Image
+      format="webp"
+      src={Card1}
+      class="pointer-events-none z-20 p-[1px] rounded-[12.5px]"
+      alt="analytics card image"
+    />
+  </li>
+  <li
+    class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl"
+  >
+    <div class="absolute bottom-9 text-center z-40">
+      <h3 class="text-white font-semibold text-xl mb-3">
+        More than 180 languages
+      </h3>
+      <p class="text-white/70 max-w-[280px]">
+        Detect a customer’s language and trigger custom-language automations
+        across 180 languages
+      </p>
+    </div>
+    <div class="noise rounded-xl"></div>
+    <Image
+      src={Card2}
+      class="pointer-events-none z-20 p-[1px] rounded-[12.5px]"
+      alt=""
+    />
+  </li>
+  <li
+    class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl"
+  >
+    <div class="absolute bottom-9 text-center z-40">
+      <h3 class="text-white font-semibold text-xl mb-3">
+        Integration capabilities
+      </h3>
+      <p class="text-white/70 max-w-[280px]">
+        Our integrations make it easy to work with the applications your teams
+        already love
+      </p>
+    </div>
+    <div class="noise rounded-xl"></div>
+    <Image
+      src={Card3}
+      class="pointer-events-none z-20 p-[1px] rounded-[12.5px]"
+      alt=""
+    />
+  </li>
+  <li
+    class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl"
+  >
+    <div class="absolute bottom-9 text-center z-40">
+      <h3 class="text-white font-semibold text-xl mb-3">Security first</h3>
+      <p class="text-white/70 max-w-[280px]">
+        Advanced encryption and secure access controls protect customer data on
+        this platform
+      </p>
+    </div>
+    <div class="noise rounded-xl"></div>
+    <Image
+      src={Card5}
+      class="pointer-events-none z-20 p-[1px] rounded-[12.5px]"
+      alt=""
+    />
+  </li>
+  <li
+    class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl col-span-2"
+  >
+    <div class="absolute bottom-9 text-center z-40">
+      <h3 class="text-white font-semibold text-xl mb-3">
+        Solving complex tasks
+      </h3>
+      <p class="text-white/70 max-w-sm">
+        Our chatbots go beyond answers questions, seamlessly resolving complex
+        problems of customers by integrating with multiple tools.
+      </p>
+    </div>
+    <div class="noise rounded-xl"></div>
+    <Image
+      src={Card4}
+      class="pointer-events-none z-20 p-[1px] rounded-[12.5px]"
+      alt=""
+    />
+  </li>
+</ul>
+
+<style>
+  .noise {
+    position: absolute;
+    inset: 0;
+    background-image: url(../assets/images/noise.webp);
+    opacity: 0.1;
+    z-index: 30;
+    height: 100%;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    background-size: 120px;
+  }
+</style>

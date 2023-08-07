@@ -1,0 +1,47 @@
+---
+import PromoVideo from "../assets/video/promovideo.mp4";
+---
+
+<div class="max-w-7xl p-5 w-full relative m-auto pb-20">
+  <video
+    src={PromoVideo}
+    controls
+    id="js-video"
+    class="max-w-1200 w-full m-auto rounded-xl"></video>
+  <canvas
+    width="10"
+    height="6"
+    aria-hidden="true"
+    class="absolute scale-95 pointer-events-none w-full top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 blur-[12rem] -z-[1] opacity-40"
+    id="js-canvas"></canvas>
+</div>
+
+<script defer>
+  const video = document.getElementById("js-video");
+  const canvas = document.getElementById("js-canvas");
+  const ctx = canvas.getContext("2d");
+
+  let step;
+
+  const draw = () => {
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  };
+  const drawLoop = () => {
+    draw();
+    step = window.requestAnimationFrame(drawLoop);
+  };
+  const drawPause = () => {
+    window.cancelAnimationFrame(step);
+    step = undefined;
+  };
+
+  const init = () => {
+    video.addEventListener("loadeddata", draw, false);
+    video.addEventListener("seeked", draw, false);
+    video.addEventListener("play", drawLoop, false);
+    video.addEventListener("pause", drawPause, false);
+    video.addEventListener("ended", drawPause, false);
+  };
+
+  window.addEventListener("load", init);
+</script>

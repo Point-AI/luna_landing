@@ -1,4 +1,15 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, sharpImageService } from "astro/config";
+import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  experimental: {
+    assets: true,
+  },
+  integrations: [react(), tailwind()],
+  image: {
+    service: sharpImageService(),
+  },
+  base: '/luna_landing',
+});

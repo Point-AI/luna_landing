@@ -1,0 +1,24 @@
+---
+const images = await Astro.glob("../assets/images/logos/*").then((files) => {
+  return files.map((file) => file.default);
+});
+
+import { Image } from "astro:assets";
+---
+
+<div
+  class="w-full flex flex-col items-center justify-center py-8 fade-in-0 animate-in delay-1700 transition-none fill-mode-both duration-700"
+>
+  <p class="text-center text-white/60 mb-2">Trusted by</p>
+  <div
+    class="flex items-center justify-between w-full max-w-4xl px-2 opacity-60"
+  >
+    {
+      images.map((image) => (
+        <div class="w-20">
+          <Image src={image} alt={"partner logo"} class="h-full w-full" />
+        </div>
+      ))
+    }
+  </div>
+</div>
