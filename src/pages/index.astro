@@ -13,10 +13,15 @@ import PhoneImg from "../assets/images/phone-card.png";
 import WidgetImg from "../assets/images/widget-card.png";
 import ContactImg from "../assets/images/contact-card.png";
 
-const heroBackgroundSrc = await getImage({ src: HeroImage, format: "webp" });
+const heroBackgroundSrc = await getImage({
+  src: HeroImage,
+  format: "webp",
+  quality: "mid",
+});
 const contactBackgroundSrc = await getImage({
   src: ContactImg,
   format: "webp",
+  quality: "high",
 });
 
 const SECTIONS: Section[] = [
@@ -168,6 +173,7 @@ const SECTIONS: Section[] = [
           supercharge Luna's effectiveness and provide standout service.
         </p>
         <Image
+          quality="high"
           alt="infographic displaying different sources for the AI training. Articles, Your CMS, Public URLs, Conversation Data"
           src={CustomerImg}
           format="webp"
@@ -200,25 +206,28 @@ const SECTIONS: Section[] = [
         <div class="flex items-baseline max-w-full">
           <div class="flex">
             <Image
-              alt="infographic displaying different sources for the AI training. Articles, Your CMS, Public URLs, Conversation Data"
+              alt="infographic displaying Luna on different platforms. Website widget"
               src={WidgetImg}
               format="webp"
               class="pointer-events-none w-full object-contain"
+              quality="mid"
             />
           </div>
           <div class="flex -mx-16">
             <Image
-              alt="infographic displaying different sources for the AI training. Articles, Your CMS, Public URLs, Conversation Data"
+              alt="infographic displaying Luna on different platforms. Social media chatbot"
               src={PhoneImg}
               format="webp"
+              quality="mid"
               class="pointer-events-none w-full object-contain"
             />
           </div>
           <div class="flex">
             <Image
-              alt="infographic displaying different sources for the AI training. Articles, Your CMS, Public URLs, Conversation Data"
+              alt="infographic displaying Luna on different platforms. API illustration"
               src={ApiImg}
               format="webp"
+              quality="mid"
               class="pointer-events-none w-full object-contain"
             />
           </div>
