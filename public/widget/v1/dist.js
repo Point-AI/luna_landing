@@ -885,6 +885,7 @@
     };
 
     var name = (/** @type {string} */ userId) => {
+        console.log(userId);
         if (userId === "64846572d9053a395685edbf" || userId === "64bd30d0bae3200c9bef2947") {
             return "Aisha";
         }
@@ -1819,7 +1820,6 @@
     	let offsetX, offsetY;
     	if (offset) [offsetX, offsetY] = offset.split(";"); else [offsetX, offsetY] = ["16px", "16px"];
     	let { language } = $$props;
-    	console.log(offsetX, offsetY);
     	let open = false;
     	let showGreeting = false;
 
@@ -1864,7 +1864,9 @@
     		chatId = chat.id;
     		$$invalidate(6, chatLanguage = chat.language);
     		$$invalidate(5, messages = chat.messages);
-    		$$invalidate(8, botName = name());
+    		console.log(userId);
+    		$$invalidate(8, botName = name(userId));
+    		console.log(botName);
     		$$invalidate(7, languages = await getLanguages(userId));
 
     		setTimeout(
