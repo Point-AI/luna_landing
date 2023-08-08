@@ -53,7 +53,7 @@ const SECTIONS: Section[] = [
     <Navbar sections={SECTIONS} />
     <div class="sm:py-24 py-12 flex justify-center items-center flex-col">
       <h1
-        class="font-bold text-4xl md:text-7xl px-5 max-w-4xl text-center leading-[95%] text-bg bg-clip-text text-transparent py-8 blur-enter delay-75 transition-none"
+        class="font-bold text-4xl md:text-7xl px-5 md:px-0 max-w-4xl text-center leading-[95%] text-bg bg-clip-text text-transparent py-8 blur-enter delay-75 transition-none"
       >
         Resolve 80% of your support tickets. Instantly.
       </h1>
@@ -261,7 +261,9 @@ const SECTIONS: Section[] = [
           class="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-cardBlack rounded-[11px] -z-10"
         >
         </div>
-        <div class="md:pl-14 px-5 text-center flex items-center flex-col">
+        <div
+          class="md:pl-14 px-5 text-center md:block md:text-left flex items-center flex-col"
+        >
           <h2 class="text-white text-3xl font-semibold mb-5 mt-14">
             We're here to help!
           </h2>
