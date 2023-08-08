@@ -15,15 +15,17 @@ const Navbar = ({ sections }: { sections: Section[] }) => {
           />
         </li>
 
-        <div className="m-auto flex gap-8">
-          {sections.map((section, ind) => (
-            <li key={ind}>
-              <a href={section.href} className="text-sm">
-                {section.name}
-              </a>
-            </li>
-          ))}
-        </div>
+        <li className="m-auto">
+          <ul className="flex gap-8">
+            {sections.map((section, ind) => (
+              <li key={ind}>
+                <a href={section.href} className="text-sm">
+                  {section.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </li>
 
         <li>
           <a
