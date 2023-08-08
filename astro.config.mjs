@@ -1,18 +1,19 @@
 import { defineConfig, sharpImageService } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-
 import sitemap from "@astrojs/sitemap";
+
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
   experimental: {
-    assets: true,
+    assets: true
   },
-  integrations: [react(), tailwind(), sitemap()],
+  integrations: [react(), tailwind(), sitemap(), partytown()],
   image: {
-    service: sharpImageService(),
+    service: sharpImageService()
   },
   base: "/",
-  site: "https://pointai.tech",
+  site: "https://pointai.tech"
 });
