@@ -7,11 +7,12 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   experimental: {
-    assets: true
+    assets: true,
   },
   integrations: [react(), tailwind(), sitemap()],
   image: {
-    service: sharpImageService()
+    service: sharpImageService(),
   },
-  base: '/'
+  base: "/",
+  site: "https://pointai.tech",
 });
