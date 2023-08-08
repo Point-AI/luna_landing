@@ -3,17 +3,22 @@ import { Image } from "astro:assets";
 import Card1 from "../assets/images/cards/card1.png";
 import Card2 from "../assets/images/cards/card2.png";
 import Card3 from "../assets/images/cards/card3.png";
-import Card4 from "../assets/images/cards/card4.png";
+import Card4 from "../assets/images/cards/card4-3175w.png";
 import Card5 from "../assets/images/cards/card5.png";
+import Card4Resp from "../assets/images/cards/card4-856w.png";
 ---
 
-<ul class="grid grid-cols-3 gap-5 max-w-1200 m-auto">
+<ul
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-1200 m-auto px-4 sm:px-12 lg:px-5"
+>
   <li
     class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl"
   >
-    <div class="absolute bottom-9 text-center z-40">
-      <h3 class="text-white font-semibold text-xl mb-3">Powerful analytics</h3>
-      <p class="text-white/70 max-w-[280px]">
+    <div class="absolute bottom-6 text-center z-40">
+      <h3 class="text-white text-lg font-semibold sm:text-xl mb-3">
+        Powerful analytics
+      </h3>
+      <p class="text-white/70 text-sm sm:text-base max-w-[280px] px-2">
         Better understand your customers with AI-powered analysis of support
         conversations
       </p>
@@ -29,11 +34,11 @@ import Card5 from "../assets/images/cards/card5.png";
   <li
     class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl"
   >
-    <div class="absolute bottom-9 text-center z-40">
-      <h3 class="text-white font-semibold text-xl mb-3">
+    <div class="absolute bottom-6 text-center z-40">
+      <h3 class="text-white text-lg font-semibold sm:text-xl mb-3">
         More than 180 languages
       </h3>
-      <p class="text-white/70 max-w-[280px]">
+      <p class="text-white/70 text-sm sm:text-base max-w-[280px] px-2">
         Detect a customer’s language and trigger custom-language automations
         across 180 languages
       </p>
@@ -49,11 +54,11 @@ import Card5 from "../assets/images/cards/card5.png";
   <li
     class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl"
   >
-    <div class="absolute bottom-9 text-center z-40">
-      <h3 class="text-white font-semibold text-xl mb-3">
+    <div class="absolute bottom-6 text-center z-40">
+      <h3 class="text-white text-lg font-semibold sm:text-xl mb-3">
         Integration capabilities
       </h3>
-      <p class="text-white/70 max-w-[280px]">
+      <p class="text-white/70 text-sm sm:text-base max-w-[280px] px-2">
         Our integrations make it easy to work with the applications your teams
         already love
       </p>
@@ -69,9 +74,11 @@ import Card5 from "../assets/images/cards/card5.png";
   <li
     class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl"
   >
-    <div class="absolute bottom-9 text-center z-40">
-      <h3 class="text-white font-semibold text-xl mb-3">Security first</h3>
-      <p class="text-white/70 max-w-[280px]">
+    <div class="absolute bottom-6 text-center z-40">
+      <h3 class="text-white text-lg font-semibold sm:text-xl mb-3">
+        Security first
+      </h3>
+      <p class="text-white/70 text-sm sm:text-base max-w-[280px] px-2">
         Advanced encryption and secure access controls protect customer data on
         this platform
       </p>
@@ -85,13 +92,13 @@ import Card5 from "../assets/images/cards/card5.png";
     />
   </li>
   <li
-    class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl col-span-2"
+    class="bg-gradient-to-b from-[#3d3d3d] to-cardBlack isolate relative flex justify-center rounded-xl sm:col-span-2"
   >
-    <div class="absolute bottom-9 text-center z-40">
-      <h3 class="text-white font-semibold text-xl mb-3">
+    <div class="absolute bottom-6 text-center z-40">
+      <h3 class="text-white text-lg font-semibold sm:text-xl mb-3">
         Solving complex tasks
       </h3>
-      <p class="text-white/70 max-w-sm">
+      <p class="text-white/70 text-sm sm:text-base max-w-sm px-2">
         Our chatbots go beyond answers questions, seamlessly resolving complex
         problems of customers by integrating with multiple tools.
       </p>
@@ -101,6 +108,8 @@ import Card5 from "../assets/images/cards/card5.png";
       format="avif"
       src={Card4}
       class="pointer-events-none z-20 p-[1px] rounded-[12.5px]"
+      srcset={Card4.src + " 3175w, " + Card4Resp.src + " 856w"}
+      sizes="(max-width: 768px) 856w, 3175w"
       alt=""
     />
   </li>

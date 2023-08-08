@@ -51,14 +51,14 @@ const SECTIONS: Section[] = [
     style={`background: url(${heroBackgroundSrc.src}) center center no-repeat; background-size: 2100px;`}
   >
     <Navbar sections={SECTIONS} />
-    <div class="py-24 flex justify-center items-center flex-col">
+    <div class="sm:py-24 py-12 flex justify-center items-center flex-col">
       <h1
-        class="font-bold text-7xl max-w-4xl text-center leading-[88%] text-bg bg-clip-text text-transparent py-8 blur-enter delay-75 transition-none"
+        class="font-bold text-4xl md:text-7xl px-5 max-w-4xl text-center leading-[95%] text-bg bg-clip-text text-transparent py-8 blur-enter delay-75 transition-none"
       >
         Resolve 80% of your support tickets. Instantly.
       </h1>
       <p
-        class="text-center max-w-xl text-xl opacity-50 delay-500 transition-none blur-enter"
+        class="text-center px-5 max-w-xl sm:text-xl opacity-50 delay-500 transition-none blur-enter"
       >
         Discover the ultimate customer support solution with Luna, the AI
         chatbot designed to revolutionize your customer experience.
@@ -98,7 +98,7 @@ const SECTIONS: Section[] = [
       </h2>
       <Cards />
     </section>
-    <section id="numbers" class="py-20">
+    <section id="numbers" class="py-20 px-5">
       <div
         class="max-w-1200 w-full rounded-xl isolate relative m-auto bg-gradient-to-b from-[#3d3d3d] to-cardBlack p-[1px] flex flex-col items-center"
       >
@@ -112,10 +112,14 @@ const SECTIONS: Section[] = [
         >
           Luna in numbers
         </h2>
-        <h3 class="text-5xl font-semibold max-w-2xl m-auto text-center">
+        <h3
+          class="font-semibold max-w-2xl m-auto text-center text-3xl md:text-5xl px-4"
+        >
           Accelerating Success with PointAI & Luna
         </h3>
-        <ul class="flex my-24 justify-evenly w-full">
+        <ul
+          class="flex my-12 text-center md:text-left md:my-24 justify-evenly w-full md:flex-row flex-col items-center gap-y-10 gap-x-8 px-4 flex-wrap"
+        >
           <li>
             <h4
               class="text-8xl bg-gradient-to-b from-blue-400 to-indigo-700 text-transparent bg-clip-text font-semibold drop-shadow-[0px_0px_42px_#4338ca]"
@@ -149,7 +153,7 @@ const SECTIONS: Section[] = [
         </ul>
       </div>
     </section>
-    <section id="integrations" class="pb-20">
+    <section id="integrations" class="pb-20 px-5">
       <div
         class="max-w-1200 w-full rounded-xl isolate relative m-auto bg-gradient-to-b from-[#3d3d3d] to-cardBlack p-[1px] flex flex-col items-center"
       >
@@ -159,30 +163,36 @@ const SECTIONS: Section[] = [
         >
         </div>
         <h2
-          class="uppercase text-headingGray text-center font-bold mb-10 mt-14"
+          class="uppercase text-headingGray text-center font-bold mb-10 mt-14 px-4"
         >
           Custom-tailored for your customers
         </h2>
-        <h3 class="text-5xl font-semibold max-w-2xl m-auto text-center">
+        <h3
+          class="text-3xl md:text-5xl font-semibold max-w-2xl m-auto text-center px-4"
+        >
           Your Power Tool for Precision Customer Service
         </h3>
-        <p class="text-white/70 max-w-xl mt-6 m-auto text-center">
+        <p
+          class="text-white/70 max-w-xl mt-6 m-auto text-center px-4 text-sm md:text-base"
+        >
           Elevate your customer experience with Luna, drawing from multiple
           truth sources including Intercom articles, company data, and public
           URLs for precise answers. Harness the power of conversation data to
           supercharge Luna's effectiveness and provide standout service.
         </p>
-        <Image
-          quality="high"
-          alt="infographic displaying different sources for the AI training. Articles, Your CMS, Public URLs, Conversation Data"
-          src={CustomerImg}
-          format="avif"
-          class="max-w-2xl m-auto mt-8 pointer-events-none"
-          loading="lazy"
-        />
+        <div class="flex">
+          <Image
+            quality="high"
+            alt="infographic displaying different sources for the AI training. Articles, Your CMS, Public URLs, Conversation Data"
+            src={CustomerImg}
+            format="avif"
+            class="max-w-2xl m-auto mt-8 pointer-events-none w-full"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
-    <section id="integrations" class="pb-20">
+    <section id="integrations" class="pb-20 px-5">
       <div
         class="max-w-1200 w-full rounded-xl isolate relative m-auto bg-gradient-to-b from-[#3d3d3d] to-cardBlack p-[1px] flex flex-col items-center"
       >
@@ -192,14 +202,18 @@ const SECTIONS: Section[] = [
         >
         </div>
         <h2
-          class="uppercase text-headingGray text-center font-bold mb-10 mt-14"
+          class="uppercase text-headingGray text-center font-bold mb-10 mt-14 px-4"
         >
           Multilingual and Multiplatform
         </h2>
-        <h3 class="text-5xl font-semibold max-w-2xl m-auto text-center">
+        <h3
+          class="text-3xl md:text-5xl font-semibold max-w-2xl m-auto text-center px-5"
+        >
           Unleash Luna's Versatility
         </h3>
-        <p class="text-white/70 max-w-xl mt-6 m-auto text-center">
+        <p
+          class="text-white/70 max-w-xl mt-6 m-auto text-center px-4 text-sm md:text-base mb-4"
+        >
           Streamline your interactions with Luna, use it anywhere you want.
           Seamlessly integrate Luna into your preferred platform, be it social
           media, your website, or use our API to embed it in your own app.
@@ -215,7 +229,7 @@ const SECTIONS: Section[] = [
               loading="lazy"
             />
           </div>
-          <div class="flex -mx-16">
+          <div class="flex -mx-16 z-20">
             <Image
               alt="infographic displaying Luna on different platforms. Social media chatbot"
               src={PhoneImg}
@@ -238,16 +252,16 @@ const SECTIONS: Section[] = [
         </div>
       </div>
     </section>
-    <section id="contact" class="pb-20">
+    <section id="contact" class="pb-20 px-5">
       <div
-        class="max-w-1200 w-full rounded-xl isolate relative m-auto bg-gradient-to-b from-[#3d3d3d] to-cardBlack p-[1px] flex flex-row justify-between items-stretch overflow-hidden"
+        class="max-w-1200 w-full rounded-xl isolate relative m-auto bg-gradient-to-b from-[#3d3d3d] to-cardBlack p-[1px] flex flex-row md:justify-between justify-center items-stretch overflow-hidden"
       >
         <div class="noise rounded-xl z-30 mix-blend-screen opacity-[0.1]"></div>
         <div
           class="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] bg-cardBlack rounded-[11px] -z-10"
         >
         </div>
-        <div class="pl-14">
+        <div class="md:pl-14 px-5 text-center flex items-center flex-col">
           <h2 class="text-white text-3xl font-semibold mb-5 mt-14">
             We're here to help!
           </h2>
@@ -256,15 +270,21 @@ const SECTIONS: Section[] = [
             back to you within hours
           </p>
           <a
-            class="mt-64 block w-fit mb-14 py-3 px-8 text-black bg-white rounded-full font-bold text-xl"
+            class="md:mt-64 mt-12 block w-fit md:mb-14 py-3 px-8 text-black bg-white rounded-full font-bold text-xl"
             href="https://calendly.com/akhamidov/30min"
           >
-            Schedule a call</a
+            Schedule a call
+          </a>
+          <a
+            class="mt-4 w-fit mb-14 block md:hidden py-3 px-8 text-white/75 border-[3px] border-white/75 rounded-full font-bold text-xl"
+            href="mailto:hello@pointai.tech"
           >
+            Write an email
+          </a>
         </div>
         <div
-          class="w-[55%] p-[1px] opacity-50 relative"
-          style={`background: url(${contactBackgroundSrc.src}) center center no-repeat; background-size: cover`}
+          class="w-[55%] p-[1px] opacity-50 relative hidden md:block"
+          style={`background: url(${contactBackgroundSrc.src}) center center no-repeat; background-size: cover; -webkit-mask: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));`}
         >
           <a
             href="mailto:hello@pointai.tech"
