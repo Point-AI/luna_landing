@@ -1,47 +1,72 @@
 ---
-interface Props {
-  title: string;
-}
-
 import "@fontsource/manrope";
-
-const { title } = Astro.props;
+import { SEO } from "astro-seo";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <SEO
+      title="PointAI - Seamless Customer Support for Social Media, Websites, and Apps powered by AI"
+      description="Discover the ultimate customer support solution with PointAI, and AI chatbot Luna designed to revolutionize your customer experience."
+      charset="utf-8"
+      openGraph={{
+        basic: {
+          title:
+            "PointAI - Seamless Customer Support for Social Media, Websites, and Apps powered by AI",
+          type: "website",
+          image: "https://pointai.tech/og-image.png",
+        },
+      }}
+      extend={{
+        meta: [
+          {
+            name: "viewport",
+            content: "width=device-width",
+          },
+          {
+            name: "generator",
+            content: Astro.generator,
+          },
+          {
+            name: "keywords",
+            content:
+              "pointai, ai, chatbot, customer support, customer service, customer experience, customer engagement, customer satisfaction, customer success, customer relationship management, crm, customer relationship, customer relationship management software, customer relationship management system, customer relationship management tools, customer relationship management solutions, customer relationship management software solutions, customer relationship management software tools, customer relationship management system software, customer relationship management system tools, customer relationship management system solutions, customer relationship management system software solutions, customer relationship management",
+          },
+        ],
+        link: [
+          {
+            rel: "icon",
+            href: "/favicon.ico",
+            type: "image/x-icon",
+          },
+        ],
+      }}
+    />
   </head>
   <body class="isolate relative">
     <slot />
+    <style is:global>
+      html {
+        font-family: system-ui, sans-serif;
+        background: #000;
+        background-size: 224px;
+        color: #e6e6e6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        scroll-behavior: smooth;
+      }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
   </body>
 </html>
-
-<style is:global>
-  html {
-    font-family: system-ui, sans-serif;
-    background: #000;
-    background-size: 224px;
-    color: #e6e6e6;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    scroll-behavior: smooth;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>

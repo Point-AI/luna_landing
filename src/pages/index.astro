@@ -39,7 +39,7 @@ const SECTIONS: Section[] = [
 ];
 ---
 
-<Layout title="Luna - your AI helper">
+<Layout>
   <div class="noise"></div>
   <header
     class="z-50 relative hero-bg pb-20"
@@ -62,7 +62,9 @@ const SECTIONS: Section[] = [
         class="mt-14 py-3 px-8 text-black rounded-full font-bold text-xl animate-in fade-in-0 slide-in-from-bottom-2 in duration-700 fill-mode-both delay-1000 transition-none zoom-in-[98%] relative z-10 group"
         aria-label="Get Started"
       >
-        <span class="z-20 text-black relative top-0 left-0">Get Started</span>
+        <a href="#contact" class="z-20 text-black relative top-0 left-0"
+          >Get Started</a
+        >
         <div
           class="w-full h-full bg-white absolute top-0 left-0 rounded-full z-[5]"
         >
@@ -240,13 +242,21 @@ const SECTIONS: Section[] = [
             Don’t be shy to reach out! Fill up the form and our team will get
             back to you within hours
           </p>
-          <a class="mt-64 block w-fit mb-14 py-3 px-8 text-black bg-white rounded-full font-bold text-xl" href="https://calendly.com/akhamidov/30min"> Schedule a call</a>
+          <a
+            class="mt-64 block w-fit mb-14 py-3 px-8 text-black bg-white rounded-full font-bold text-xl"
+            href="https://calendly.com/akhamidov/30min"
+          >
+            Schedule a call</a
+          >
         </div>
         <div
           class="w-[55%] p-[1px] opacity-50 relative"
           style={`background: url(${contactBackgroundSrc.src}) center center no-repeat; background-size: cover`}
         >
-        <a href="mailto:hello@pointai.tech" class="absolute right-16 bottom-16 text-3xl">hello@pointai.tech</a>
+          <a
+            href="mailto:hello@pointai.tech"
+            class="absolute right-16 bottom-16 text-3xl">hello@pointai.tech</a
+          >
         </div>
       </div>
     </section>

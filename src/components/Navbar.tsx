@@ -6,9 +6,13 @@ const Navbar = ({ sections }: { sections: Section[] }) => {
     <nav className="w-full pt-12 z-50">
       <ul className="max-w-7xl flex flex-row justify-between px-10 m-auto items-center">
         <li>
-          <a href="/" className="text-xl font-bold">
-            <img src={Logo.src} alt="" className="w-24 m-0" width={Logo.width} height={Logo.height}/>
-          </a>
+          <img
+            src={Logo.src}
+            alt="PointAI Logo"
+            className="w-24 m-0"
+            width={Logo.width}
+            height={Logo.height}
+          />
         </li>
 
         <div className="m-auto flex gap-8">
@@ -22,9 +26,12 @@ const Navbar = ({ sections }: { sections: Section[] }) => {
         </div>
 
         <li>
-          <button className="font-bold text-black bg-white rounded-full px-3 py-2 text-xs tracking-tight">
+          <a
+            href="#contact"
+            className="font-bold text-black bg-white rounded-full px-3 py-2 text-xs tracking-tight"
+          >
             Book a demo
-          </button>
+          </a>
         </li>
       </ul>
     </nav>
