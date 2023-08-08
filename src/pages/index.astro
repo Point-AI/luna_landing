@@ -15,12 +15,12 @@ import ContactImg from "../assets/images/contact-card.png";
 
 const heroBackgroundSrc = await getImage({
   src: HeroImage,
-  format: "webp",
+  format: "avif",
   quality: "mid",
 });
 const contactBackgroundSrc = await getImage({
   src: ContactImg,
-  format: "webp",
+  format: "avif",
   quality: "high",
 });
 
@@ -176,7 +176,7 @@ const SECTIONS: Section[] = [
           quality="high"
           alt="infographic displaying different sources for the AI training. Articles, Your CMS, Public URLs, Conversation Data"
           src={CustomerImg}
-          format="webp"
+          format="avif"
           class="max-w-2xl m-auto mt-8 pointer-events-none"
           loading="lazy"
         />
@@ -209,7 +209,7 @@ const SECTIONS: Section[] = [
             <Image
               alt="infographic displaying Luna on different platforms. Website widget"
               src={WidgetImg}
-              format="webp"
+              format="avif"
               class="pointer-events-none w-full object-contain"
               quality="mid"
               loading="lazy"
@@ -219,7 +219,7 @@ const SECTIONS: Section[] = [
             <Image
               alt="infographic displaying Luna on different platforms. Social media chatbot"
               src={PhoneImg}
-              format="webp"
+              format="avif"
               quality="mid"
               class="pointer-events-none w-full object-contain"
               loading="lazy"
@@ -229,7 +229,7 @@ const SECTIONS: Section[] = [
             <Image
               alt="infographic displaying Luna on different platforms. API illustration"
               src={ApiImg}
-              format="webp"
+              format="avif"
               quality="mid"
               class="pointer-events-none w-full object-contain"
               loading="lazy"
@@ -291,7 +291,7 @@ const SECTIONS: Section[] = [
     z-index: -20;
     position: absolute;
     inset: 0;
-    background-image: url(../assets/images/noise.webp);
+    background-image: url(../assets/images/noise.avif);
     opacity: 0.15;
     height: 100%;
     mix-blend-mode: overlay;
