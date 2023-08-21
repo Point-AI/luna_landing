@@ -40,12 +40,14 @@ import PromoVideo from "../assets/video/promovideo.mp4";
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
   }
 
   .play-button {
     font-size: 3rem;
     cursor: pointer;
     margin-bottom: 5rem;
+    pointer-events: all;
   }
 
   .play-button:hover {
@@ -60,9 +62,12 @@ const ctx = canvas.getContext("2d");
 const playButton = document.getElementById("playButton");
 
 playButton.addEventListener("click", () => {
-  const video = document.getElementById("js-video");
-  playButton.style.display = "none";
   video.play();
+});
+
+// hide button if video is playing
+video.addEventListener("play", () => {
+  playButton.style.display = "none";
 });
 
 
