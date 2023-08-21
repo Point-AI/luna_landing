@@ -48,7 +48,23 @@ import { SEO } from "astro-seo";
         ],
       }}
     />
-    <script defer  type="text/partytown" src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6ac3ff34c7384462917857d5e5d038d2"}'></script>
+    <script
+      defer
+      type="text/partytown"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "6ac3ff34c7384462917857d5e5d038d2"}'></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-52XX51QW12"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-52XX51QW12");
+    </script>
   </head>
   <body class="isolate relative">
     <slot />
@@ -62,15 +78,8 @@ import { SEO } from "astro-seo";
         scroll-behavior: smooth;
       }
       code {
-        font-family:
-          Menlo,
-          Monaco,
-          Lucida Console,
-          Liberation Mono,
-          DejaVu Sans Mono,
-          Bitstream Vera Sans Mono,
-          Courier New,
-          monospace;
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
       }
     </style>
   </body>
