@@ -980,7 +980,7 @@
     			? 'appbar-open'
     			: '') + " svelte-s5c9a4");
 
-    			attr(div4, "id", "content");
+    			attr(div4, "id", "chat-content");
     			attr(div4, "class", "chat-content svelte-s5c9a4");
     			attr(input, "type", "text");
     			attr(input, "placeholder", "Type here");
