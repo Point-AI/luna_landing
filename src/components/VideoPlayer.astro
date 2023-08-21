@@ -2,7 +2,15 @@
 import PromoVideo from "../assets/video/promovideo.mp4";
 ---
 
-<div class="max-w-7xl p-5 w-full relative m-auto pb-20">
+<div class="max-w-7xl p-5 w-full relative m-auto pb-20 video">
+  <div class="play-button-container">
+    <a
+      class="w-fit py-3 px-8 text-black bg-white rounded-full font-bold text-xl play-button"
+      id="playButton"
+    >
+      ▶ Play Video
+    </a>
+  </div>
   <video
     src={PromoVideo}
     controls
@@ -17,32 +25,68 @@ import PromoVideo from "../assets/video/promovideo.mp4";
     id="js-canvas"></canvas>
 </div>
 
+<style>
+  .video {
+    position: relative;
+  }
+
+  .play-button-container {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .play-button {
+    font-size: 3rem;
+    cursor: pointer;
+    margin-bottom: 5rem;
+  }
+
+  .play-button:hover {
+    background-color: black;
+  }
+</style>
+
 <script defer>
+const video = document.getElementById("js-video");
+const canvas = document.getElementById("js-canvas");
+const ctx = canvas.getContext("2d");
+const playButton = document.getElementById("playButton");
+
+playButton.addEventListener("click", () => {
   const video = document.getElementById("js-video");
-  const canvas = document.getElementById("js-canvas");
-  const ctx = canvas.getContext("2d");
+  playButton.style.display = "none";
+  video.play();
+});
 
-  let step;
 
-  const draw = () => {
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-  };
-  const drawLoop = () => {
-    draw();
-    step = window.requestAnimationFrame(drawLoop);
-  };
-  const drawPause = () => {
-    window.cancelAnimationFrame(step);
-    step = undefined;
-  };
+let step;
 
-  const init = () => {
-    video.addEventListener("loadeddata", draw, false);
-    video.addEventListener("seeked", draw, false);
-    video.addEventListener("play", drawLoop, false);
-    video.addEventListener("pause", drawPause, false);
-    video.addEventListener("ended", drawPause, false);
-  };
+const draw = () => {
+  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+};
+const drawLoop = () => {
+  draw();
+  step = window.requestAnimationFrame(drawLoop);
+};
+const drawPause = () => {
+  window.cancelAnimationFrame(step);
+  step = undefined;
+};
 
-  window.addEventListener("load", init);
+const init = () => {
+  video.addEventListener("loadeddata", draw, false);
+  video.addEventListener("seeked", draw, false);
+  video.addEventListener("play", drawLoop, false);
+  video.addEventListener("pause", drawPause, false);
+  video.addEventListener("ended", drawPause, false);
+};
+
+window.addEventListener("load", init);
 </script>
